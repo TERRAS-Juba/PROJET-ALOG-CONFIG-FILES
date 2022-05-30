@@ -1,0 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2002/eureka/
+  instance:
+    hostname: localhost
+
+server:
+  port: 2003
+
+spring:
+  application:
+    name: proxyserver
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
